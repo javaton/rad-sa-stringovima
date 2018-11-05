@@ -3,23 +3,33 @@ package stringovi;
 public class Demo {
 
 	public static void main(String[] args) {
-		// Instanciranje sa kljucnom recju new i vrednost kao ulazni parametar
-		String s = new String("Tekst");
-		//Odmah dodeljujemo vrednost String-u
-		String s1 = "Tekst 2";
-		System.out.println(s);
-		System.out.println(s1);
-//		Instanciranje iz niza karaktera
-		char[] niz = {'d','a','n','a','s'};
-		String s3 = new String(niz);
+		String s1  = "Danas";
+		String s2 = "               je lep dan";
+//		String s3 = s1 + petnaesti +s2; ne moze
+//		String s3 = s1 + 15 +s2; ok
+		String s3 = s1 +s2;
 		System.out.println(s3);
-//		Instaciranje iz dela niza
-		String s4 = new String(niz, 2, 3);
+//		Uzimanje dela stringa iz reci
+		String s4 = s3.substring(13);
 		System.out.println(s4);
-		////		Instanciranje iz niza bytova 
-//		byte asci[] = {64,66,67,68};
-//		String s4 = new String(asci);
-//		System.out.println(s4);
+		String s5 = s3.substring(2, 5);
+		System.out.println(s5);
+//		Zamena odredjenog karaktera
+		String s6 = s1.replace("na", "o");
+		System.out.println(s6);
+//		Odsecanje razmaka pre i posle reci
+		String s7 = s2.trim();
+		System.out.println(s7);
+//		Povecanje svih slova
+		String s8 = s1.toUpperCase();
+		System.out.println(s8);
+//		Smanjivanje svih slova u stringu
+		String s9 = s1.toLowerCase();
+		System.out.println(s9);
+//		Duzina Stringa
+		System.out.println("Duzina stringa je " +s3.length());
+		
+		System.out.println("Vidimo se za pola sata!");
 	}
 
 }
